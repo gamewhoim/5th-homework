@@ -26,23 +26,12 @@ private:
 	FVector2D Previouslocation;
 	FVector2D Currentlocation; //현재위치
 	
-	float Totaldistance;
-	int32 Totaleventcount;
+	float TotalDistance;
+	int32 TotalEventCount;
 	
 
 	int32 Step();
-	void move(int32 MoveCount);
+	void move(int32 MoveCount, float Probability);
 	void TriggerEventWithProbability(float Probability);
-	float distance(FVector second, FVector first)
-	{
-		float dx = first.X - second.X;
-		float dy = first.Y - second.Y;
-		return FMath::Sqrt(dx * dx + dy * dy);
-	}
-
+	float Distance(FVector2D second, FVector2D first);
 };
-
-
-{
-
-}
